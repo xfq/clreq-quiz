@@ -57,6 +57,37 @@ a:hover { color: var(--accent); }
 }
 
 .site-header { justify-content: flex-end; }
+
+.language-switcher {
+  display: inline-flex;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  background: rgba(255, 250, 241, 0.75);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.language-button {
+  min-height: 2rem;
+  padding: 0.3rem 0.7rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.language-button[aria-pressed="true"] {
+  background: var(--ink);
+  color: #fff8e8;
+  font-weight: 700;
+}
+
+.language-button:focus-visible {
+  outline: 3px solid rgba(143, 47, 31, 0.38);
+  outline-offset: 3px;
+}
+
 .site-footer { margin-top: auto; justify-content: center; }
 
 .text-link,
