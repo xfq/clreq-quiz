@@ -164,7 +164,7 @@ const locales = {
         id: 'mixed-punctuation',
         topic: '中西混排',
         question: '中文正文中夹杂英文和数字时，标点原则上怎么处理？',
-        scenario: '我们发布了 CSS Writing Modes Level 4。',
+        scenario: '我们发布了CSS Writing Modes Level 4。',
         choices: [
           ['a', '正文是中文时，原则上仍使用中文标点'],
           ['b', '只要有英文，就必须全篇使用英文标点'],
@@ -178,7 +178,7 @@ const locales = {
         id: 'vertical-western',
         topic: '直排混排',
         question: '直排中文中遇到较长的西文单词时，常见处理是什么？',
-        scenario: '直排文本中出现 Internationalization 这样的词。',
+        scenario: '直排文本中出现Internationalization这样的词。',
         choices: [
           ['a', '逐个字母直排'],
           ['b', '常使用比例字体并顺时针旋转90°配置'],
@@ -411,7 +411,7 @@ const locales = {
         id: 'mixed-punctuation',
         topic: '中西混排',
         question: '中文正文中夾雜英文和數字時，標點原則上怎麼處理？',
-        scenario: '我們發布了 CSS Writing Modes Level 4。',
+        scenario: '我們發布了CSS Writing Modes Level 4。',
         choices: [
           ['a', '正文是中文時，原則上仍使用中文標點'],
           ['b', '只要有英文，就必須全篇使用英文標點'],
@@ -425,7 +425,7 @@ const locales = {
         id: 'vertical-western',
         topic: '直排混排',
         question: '直排中文中遇到較長的西文單字時，常見處理是什麼？',
-        scenario: '直排文本中出現 Internationalization 這樣的詞。',
+        scenario: '直排文本中出現Internationalization這樣的詞。',
         choices: [
           ['a', '逐個字母直排'],
           ['b', '常使用比例字型並順時針旋轉90°配置'],
