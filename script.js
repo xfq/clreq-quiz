@@ -59,7 +59,7 @@ const locales = {
           ['c', '标点在字面中的位置常有地区差异，应结合区域和字体处理']
         ],
         answer: 'c',
-        explanation: '港台标点多居中，中国大陆标点多靠近受注文字一侧；这更像地区排版规则差异，不只是繁简差异。',
+        explanation: '中文点号的位置常受地区排版习惯和字体设计影响。港台标点多居中，中国大陆标点多靠近受注文字一侧；这不是单纯的繁简问题。',
         source: 'https://www.w3.org/TR/clreq/#line_composition_rules_for_punctuation_marks'
       },
       {
@@ -73,7 +73,7 @@ const locales = {
           ['c', '因为简体字只能横排']
         ],
         answer: 'a',
-        explanation: 'clreq 建议用户代理按“区域”而不是只按“繁简”区分排版规则。',
+        explanation: 'clreq 建议按“区域”而不只是“繁简”区分排版规则。同样是繁体内容，出版地区和使用场景不同，排版习惯也可能不同。',
         source: 'https://www.w3.org/TR/clreq/#major_differences_between_horizontal_and_vertical_writing_modes'
       },
       {
@@ -94,14 +94,14 @@ const locales = {
         id: 'dash-unbreakable',
         topic: '不可拆分',
         question: '中文破折号遇到换行时，哪种处理更合理？',
-        scenario: '这件事<br>—<br>—后来没人再提。',
+        scenario: '这件事—<br>—后来没人再提。',
         choices: [
           ['a', '两个破折号可以随便拆成两行'],
           ['b', '两字宽破折号应视为整体，避免拆到两行'],
           ['c', '中文里不能使用破折号']
         ],
         answer: 'b',
-        explanation: 'clreq 说明破折号占两个汉字空间，不应为了适配分行而断开。',
+        explanation: '中文破折号通常占两个汉字空间，应作为一个整体处理。',
         source: 'https://www.w3.org/TR/clreq/#id82'
       },
       {
@@ -129,14 +129,14 @@ const locales = {
           ['c', '省略号只能放在段首']
         ],
         answer: 'a',
-        explanation: '中文省略号占两个汉字空间，clreq 明确说明不应以适配分行为由拆至两行。',
+        explanation: '中文省略号占两个汉字空间，不应以适配分行为由拆至两行。',
         source: 'https://www.w3.org/TR/clreq/#h_ellipsis'
       },
       {
         id: 'emphasis-position',
         topic: '着重号',
         question: '横排中文里的着重号通常放在哪里？',
-        scenario: '<span class="mark">重</span><span class="mark">要</span> 两字需要强调。',
+        scenario: '给这段文字添加<span class="mark">着重号</span>。',
         choices: [
           ['a', '文字上方'],
           ['b', '文字下方'],
@@ -149,15 +149,15 @@ const locales = {
       {
         id: 'emphasis-punctuation',
         topic: '着重号',
-        question: '给一整句加着重号时，标点也通常一起加点吗？',
+        question: '如果整句都要加着重号，句号一般怎么处理？',
         scenario: '这句话很重要。',
         choices: [
-          ['a', '标点通常不再添加着重号'],
-          ['b', '所有标点必须加着重号'],
-          ['c', '只有句号必须加着重号']
+          ['a', '只给文字加，句号不加'],
+          ['b', '句号也加，因为它属于这句话'],
+          ['c', '只给句号加，表示语气更强']
         ],
         answer: 'a',
-        explanation: 'clreq 指出，句号、逗号、引号、括号、书名号等标点的底端或顶端通常不再添加着重号。',
+        explanation: '句号、逗号、引号、括号、书名号等标点通常不再添加着重号。',
         source: 'https://www.w3.org/TR/clreq/#id84'
       },
       {
@@ -185,7 +185,7 @@ const locales = {
           ['c', '必须删除西文']
         ],
         answer: 'b',
-        explanation: 'clreq 说明，一般西文单词、语句或四位数以上数字在直排中常旋转 90°配置。',
+        explanation: '西文单词、语句或四位数以上数字在直排中常旋转 90°配置。',
         source: 'https://www.w3.org/TR/clreq/#id114'
       },
       {
@@ -219,15 +219,15 @@ const locales = {
       {
         id: 'number-no-split',
         topic: '不可拆分',
-        question: '下面哪种换行通常应避免？',
+        question: '校对时看到这个换行，应该提醒哪一点？',
         scenario: '气温达到 37<br>℃，请注意防暑。',
         choices: [
-          ['a', '数字和 ℃ 之间断行'],
-          ['b', '句子自然换行'],
-          ['c', '段落之间换行']
+          ['a', '37 和 ℃ 不宜被拆到两行'],
+          ['b', '℃ 前应该再加一个空格'],
+          ['c', '所有单位符号都应该放到下一行开头']
         ],
         answer: 'a',
-        explanation: '百分号、千分号、度数符号等与前面的阿拉伯数字之间通常不能拆成两行。',
+        explanation: '百分号、千分号、度数符号等通常要和前面的阿拉伯数字保持在一起，不宜因为换行被拆开。',
         source: 'https://www.w3.org/TR/clreq/#h-digits_and_their_prefix_and_suffix'
       },
       {
@@ -306,7 +306,7 @@ const locales = {
           ['c', '標點在字面中的位置常有地區差異，應結合區域和字型處理']
         ],
         answer: 'c',
-        explanation: '港臺標點多置中，中國大陸標點多靠近受注文字一側；這更像地區排版規則差異，不只是繁簡差異。',
+        explanation: '中文點號的位置常受地區排版習慣和字型設計影響。港臺標點多置中，中國大陸標點多靠近受注文字一側；這不是單純的繁簡問題。',
         source: 'https://www.w3.org/TR/clreq/#line_composition_rules_for_punctuation_marks'
       },
       {
@@ -320,7 +320,7 @@ const locales = {
           ['c', '因為簡體字只能橫排']
         ],
         answer: 'a',
-        explanation: 'clreq 建議使用者代理按「區域」而不是只按「繁簡」區分排版規則。',
+        explanation: 'clreq 建議按「區域」而不只是「繁簡」區分排版規則。同樣是繁體內容，出版地區和使用場景不同，排版習慣也可能不同。',
         source: 'https://www.w3.org/TR/clreq/#major_differences_between_horizontal_and_vertical_writing_modes'
       },
       {
@@ -341,14 +341,14 @@ const locales = {
         id: 'dash-unbreakable',
         topic: '不可拆分',
         question: '中文破折號遇到換行時，哪種處理更合理？',
-        scenario: '這件事<br>—<br>—後來沒人再提。',
+        scenario: '這件事—<br>—後來沒人再提。',
         choices: [
           ['a', '兩個破折號可以隨便拆成兩行'],
           ['b', '兩字寬破折號應視為整體，避免拆到兩行'],
           ['c', '中文裡不能使用破折號']
         ],
         answer: 'b',
-        explanation: 'clreq 說明破折號占兩個漢字空間，不應為了適配分行而斷開。',
+        explanation: '中文破折號通常占兩個漢字空間，應作為一個整體處理。',
         source: 'https://www.w3.org/TR/clreq/#id82'
       },
       {
@@ -376,14 +376,14 @@ const locales = {
           ['c', '省略號只能放在段首']
         ],
         answer: 'a',
-        explanation: '中文省略號占兩個漢字空間，clreq 明確說明不應以適配分行為由拆至兩行。',
+        explanation: '中文省略號占兩個漢字空間，不應以適配分行為由拆至兩行。',
         source: 'https://www.w3.org/TR/clreq/#h_ellipsis'
       },
       {
         id: 'emphasis-position',
         topic: '著重號',
         question: '橫排中文裡的著重號通常放在哪裡？',
-        scenario: '<span class="mark">重</span><span class="mark">要</span> 兩字需要強調。',
+        scenario: '為這段文字加上<span class="mark">著重號</span>',
         choices: [
           ['a', '文字上方'],
           ['b', '文字下方'],
@@ -396,15 +396,15 @@ const locales = {
       {
         id: 'emphasis-punctuation',
         topic: '著重號',
-        question: '給一整句加著重號時，標點也通常一起加點嗎？',
+        question: '如果整句都要加著重號，句號一般怎麼處理？',
         scenario: '這句話很重要。',
         choices: [
-          ['a', '標點通常不再添加著重號'],
-          ['b', '所有標點必須加著重號'],
-          ['c', '只有句號必須加著重號']
+          ['a', '只給文字加，句號不加'],
+          ['b', '句號也加，因為它屬於這句話'],
+          ['c', '只給句號加，表示語氣更強']
         ],
         answer: 'a',
-        explanation: 'clreq 指出，句號、逗號、引號、括號、書名號等標點的底端或頂端通常不再添加著重號。',
+        explanation: '句號、逗號、引號、括號、書名號等標點通常不再添加著重號。',
         source: 'https://www.w3.org/TR/clreq/#id84'
       },
       {
@@ -432,7 +432,7 @@ const locales = {
           ['c', '必須刪除西文']
         ],
         answer: 'b',
-        explanation: 'clreq 說明，一般西文單字、語句或四位數以上數字在直排中常旋轉 90° 配置。',
+        explanation: '西文單字、語句或四位數以上數字在直排中常旋轉 90°配置。',
         source: 'https://www.w3.org/TR/clreq/#id114'
       },
       {
@@ -466,15 +466,15 @@ const locales = {
       {
         id: 'number-no-split',
         topic: '不可拆分',
-        question: '下面哪種換行通常應避免？',
+        question: '校對時看到這個換行，應該提醒哪一點？',
         scenario: '氣溫達到 37<br>℃，請注意防暑。',
         choices: [
-          ['a', '數字和 ℃ 之間斷行'],
-          ['b', '句子自然換行'],
-          ['c', '段落之間換行']
+          ['a', '37 和 ℃ 不宜被拆到兩行'],
+          ['b', '℃ 前應該再加一個空格'],
+          ['c', '所有單位符號都應該放到下一行開頭']
         ],
         answer: 'a',
-        explanation: '百分號、千分號、度數符號等與前面的阿拉伯數字之間通常不能拆成兩行。',
+        explanation: '百分號、千分號、度數符號等通常要和前面的阿拉伯數字保持在一起，不宜因為換行被拆開。',
         source: 'https://www.w3.org/TR/clreq/#h-digits_and_their_prefix_and_suffix'
       },
       {
